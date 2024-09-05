@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Heading from "./components/heading.component";
+import Footer from "./components/footer.component";
 import CategoryCard from "./components/category-card.component";
 import LoadingSpinner from "./components/loading-spinner.component";
 import { useMyContext } from "@/context/menuContext";
@@ -7,27 +8,6 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const { state, dispatch } = useMyContext();
-  const outletRef = useRef(null);
-
-  const handleScroll = () => {
-    // get if on of the div is visible
-    if (outletRef.current.scrollTop > 0) {
-      dispatch({ type: "USER_IS_SCROLLING" });
-    } else {
-      dispatch({ type: "USER_IS_NOT_SCROLLING" });
-    }
-  };
-
-  useEffect(() => {
-    if (outletRef.current) {
-      outletRef.current.addEventListener("scroll", handleScroll);
-      return () => {
-        if (outletRef.current) {
-          outletRef.current.removeEventListener("scroll", handleScroll);
-        }
-      };
-    }
-  }, [outletRef]);
 
   useEffect(() => {
     if (state.menu_items.length > 0) {
@@ -38,7 +18,6 @@ export default function Home() {
   return (
     <>
       <motion.main
-        ref={outletRef}
         className="w-full h-full px-2 py-4 flex flex-col items-center overflow-y-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -63,6 +42,7 @@ export default function Home() {
             </div>
           </>
         )}
+        <Footer />
       </motion.main>
     </>
   );

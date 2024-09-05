@@ -1,16 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useMyContext } from "@/context/menuContext";
-import { useEffect, useState } from "react";
 
 const Heading = () => {
-  const { state, dispatch } = useMyContext();
-
-  const [user_isScrolling, setUserScrolling] = useState(false);
-
-  useEffect(() => {
-    setUserScrolling(state.user_scrolling);
-  }, [state]);
   return (
     <>
       <div

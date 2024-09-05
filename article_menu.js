@@ -109,7 +109,7 @@ export const items_array = [
       },
       {
         name: "Nacho Maniaque",
-        prix: "-- --",
+        prix: "18.75 $",
       },
     ],
   },
