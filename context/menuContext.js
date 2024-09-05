@@ -25,16 +25,6 @@ const reducer = (state, action) => {
         ...state,
         data_loading: action.payload.isLoading || false,
       };
-    case "USER_IS_SCROLLING":
-      return {
-        ...state,
-        user_scrolling: true,
-      };
-    case "USER_IS_NOT_SCROLLING":
-      return {
-        ...state,
-        user_scrolling: false,
-      };
     default:
       return state;
   }
