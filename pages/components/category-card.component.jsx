@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const CategoryCard = ({ category_name, category }) => {
+const CategoryCard = ({ category_name, category_id }) => {
   return (
     <>
       <Link
         href={{
           pathname: "/menu",
-          query: { id: category.category_id },
+          query: { id: category_id || 0 },
         }}
         className="w-[95%] md:w-[85%] lg:w-[50%] p-4 mb-6 bg-[#F89E33] flex flex-row justify-between items-center rounded-lg border border-[#7F7D7D] border-opacity-50 shadow shadow-[#7F7D7D] active:scale-[0.90] ease transition-all duration-300"
       >
