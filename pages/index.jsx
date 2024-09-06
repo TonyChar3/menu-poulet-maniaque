@@ -32,7 +32,7 @@ export default function Home() {
             <CategoryCard
               key={key}
               category_name={item.category_name}
-              category={item}
+              category_id={item.category_id}
             />
           ))
         ) : (
