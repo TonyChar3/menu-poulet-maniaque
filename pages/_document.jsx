@@ -5,6 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link
+          rel="icon"
+          href="https://ik.imagekit.io/bqofr3ncj/tr:w-20,h-20/Projects/POLUETMANIQUEPNG.png?updatedAt=1725557649846"
+        />
+        <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         />
